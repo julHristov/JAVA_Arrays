@@ -1,0 +1,25 @@
+//Print the days of week. Input takes numbers from 1 to 7;
+import java.util.Scanner;
+
+public class Demo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] dayOfWeekArr = {
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+        };
+
+        int n = Integer.parseInt(scanner.nextLine());
+
+        if(n >= 1 && n <= 7){
+            System.out.println(dayOfWeekArr[n - 1]);
+        }else{
+            System.out.println("Ivalid day!");
+        }
+    }
+}

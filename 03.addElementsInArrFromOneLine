@@ -1,0 +1,25 @@
+//This code takes elements from one line. In this particular case - numbers as string,
+//and after that the program parses each element in to number:
+
+import java.util.Scanner;
+
+public class Demo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        String[] arrayOfInputElements = input.split(" ");
+
+        int[] numbersArr = new int[arrayOfInputElements.length];
+        for(int i = 0; i < arrayOfInputElements.length; i++){
+            numbersArr[i] = Integer.parseInt(arrayOfInputElements[i]);
+            
+            //ALTERNATIVELY
+            //Scanner scanner = new Scanner(System.in);
+            //String lineInput = scanner.nextLine();
+            //int[] numbers = Arrays
+            //    .stream(lineInput.split(" "))
+            //    .mapToInt(Integer::parseInt)
+            //    .toArray();
+        }
+    }
+}

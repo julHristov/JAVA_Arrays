@@ -20,6 +20,21 @@ public class Demo {
             //    .stream(lineInput.split(" "))
             //    .mapToInt(Integer::parseInt)
             //    .toArray();
+         
+         for(int i = 0; i < numbers.length; i++){
+            System.out.printf("Index %d -> %d%n", i, numbers[i]);
+            
+            //Output:
+            //Index 0 -> 2
+            //Index 1 -> 8
+            //Index 2 -> 38
+            //Index 3 -> 25
+            //Index 4 -> 40
+            //Index 5 -> 72
+            //Index 6 -> -2
+            //Index 7 -> 44
+            //Index 8 -> 56
+        }
         }
     }
 }

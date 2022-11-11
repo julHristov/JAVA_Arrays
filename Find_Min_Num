@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class MinElement {
+    public static int readInteger(){
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
+    }
+    public static int[] readElements(int number){
+        Scanner scanner = new Scanner(System.in);
+        int[] newArray = new int[number];
+        for (int i = 0; i < number; i++){
+            System.out.println("Enter a number: \r");
+            newArray[i] = scanner.nextInt();
+            scanner.nextLine();
+        }
+        return newArray;
+    }
+
+    public static int findMin(int[] array){
+        int minNum = Integer.MAX_VALUE;
+        for (int j = 0; j < array.length; j++) {
+            if (array[j] < minNum) {
+                minNum = array[j];
+            }
+        }
+        return minNum;
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Array length: ");
+        int number = MinElement.readInteger();
+        int min = MinElement.findMin(MinElement.readElements(number));
+        System.out.println("The minimum element in array is: " + min);
+    }
+}

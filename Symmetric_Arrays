@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class SymetricArrays {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String line = scanner.nextLine();
+        int arraysNumber = Integer.parseInt(line);
+
+        for (int i = 0; i < arraysNumber; i++){
+            line = scanner.nextLine();
+            String[] array = line.split(" ");
+            for (int j = 0; j < array.length; j++){
+            if(Integer.parseInt(array[j]) == Integer.parseInt(array[array.length - 1])){
+                System.out.println("Yes");
+                break;
+            }else {
+                System.out.println("No");
+                break;
+            }
+            }
+        }
+    }
+
+}

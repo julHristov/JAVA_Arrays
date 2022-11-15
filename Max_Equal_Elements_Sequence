@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class LongestSequence {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> sequence = new ArrayList<>();
+        int maxSequence = 0;
+        int number = scanner.nextInt();
+        for (int i = 0; i < number; i++){
+            int currentNumber = scanner.nextInt();
+            if(sequence.size() == 0){
+                sequence.add(currentNumber);
+                maxSequence = findMaxSequence(sequence.size(), maxSequence);
+            }else{
+                if(sequence.contains(currentNumber)){
+                    sequence.add(currentNumber);
+                    maxSequence = findMaxSequence(sequence.size(), maxSequence);
+                }else{
+                    sequence.clear();
+                    sequence.add(currentNumber);
+                }
+            }
+        }
+        System.out.println(maxSequence);
+    }
+    public static int findMaxSequence(int size, int max){
+        if(size > max){
+            max = size;
+        }
+        return max;
+    }
+}
